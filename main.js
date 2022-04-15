@@ -16,3 +16,18 @@ for (const link of links) {
     nav.classList.remove('show')
   })
 }
+
+/***** BACK TO TOP *******/
+const backToTopButton = document.querySelector('back-to-top')
+function backToTop() {
+  if (window.scrollY >= 530) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/****** WHEN SCROLL ****** */
+window.addEventListener('scroll', function () {
+  backToTop()
+})
